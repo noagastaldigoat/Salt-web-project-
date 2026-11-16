@@ -116,6 +116,16 @@ button:hover,.button:hover{background:#333}
 .product-collection .product-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),260px));justify-content:center;}
 @media(max-width:760px){.product-collection .product-grid{grid-template-columns:repeat(2,minmax(0,260px));justify-content:center;}}
 @media(max-width:420px){.product-collection .product-grid{grid-template-columns:minmax(0,1fr);justify-content:center;}}
+/* Keep product action buttons aligned across mobile product cards */
+@media(max-width:760px){
+  .product-collection .product-card{height:100%}
+  .product-collection .product-info{display:flex;flex-direction:column;min-width:0}
+  .product-collection .product-info>p:not(.eyebrow){flex:1}
+  .product-collection .product-info .button{margin-top:auto}
+}
+@media(max-width:420px){
+  .product-collection .product-info{min-height:230px}
+}
 
 /* Our Story page layout pass: homepage-height hero; client photo to be supplied later. */
 .story-page-hero{position:relative;min-height:590px;padding:5rem 1.5rem;display:flex;align-items:center;justify-content:center;text-align:center;color:#111;background:#fff;border-bottom:1px solid #dedede;}
