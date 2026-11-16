@@ -116,6 +116,13 @@ button:hover,.button:hover{background:#333}
 .product-collection .product-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),260px));justify-content:center;}
 @media(max-width:760px){.product-collection .product-grid{grid-template-columns:repeat(2,minmax(0,260px));justify-content:center;}}
 @media(max-width:420px){.product-collection .product-grid{grid-template-columns:minmax(0,1fr);justify-content:center;}}
+/* Homepage featured product cards: align action buttons on mobile */
+@media(max-width:680px){
+  .section .product-grid>.product-card{display:flex;flex-direction:column;height:100%}
+  .section .product-grid>.product-card .product-info{display:flex;flex-direction:column;flex:1;min-height:220px}
+  .section .product-grid>.product-card .product-info>p{flex:1}
+  .section .product-grid>.product-card .product-info>.button{margin-top:auto}
+}
 /* Keep product action buttons aligned across mobile product cards */
 @media(max-width:760px){
   .product-collection .product-card{height:100%}
